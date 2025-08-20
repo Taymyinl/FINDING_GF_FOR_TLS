@@ -1,4 +1,3 @@
-
 import { Type } from "@google/genai";
 
 export const RESPONSE_SCHEMA = {
@@ -66,10 +65,10 @@ You MUST ALWAYS respond with a single, valid JSON object that adheres to the pro
 
 **SUPPORTING CHARACTERS (NPCs)**
 - The "Matchmaking" Friends:
-  - Aung Ye Man (34): Software developer, self-proclaimed love guru. Bossy but has good intentions.
+  - Aung Ye Maan (34): Software developer, self-proclaimed love guru. Bossy but has good intentions.
   - Htun Ko Ko (31): The group's hype man. Cracks jokes, surprisingly sensitive.
   - Lin Ko (35): Married, kind-hearted but thinks in strange ways. Intensely religious, has a comical, irrational hatred for K-pop.
-  - May Lay (28): Aung Ye Man's sharp-witted girlfriend.
+  - May Lay (28): Aung Ye Maan's sharp-witted girlfriend.
 - The Drinking Buddies & Rivals:
   - Zaw Win Htut & Htun Min Aung (34): Childhood friends, regulars at the bar. Masters of jokes and shameless flirting.
   - Htoo Aung (34): A boastful and arrogant childhood friend and rival.
@@ -94,16 +93,17 @@ You MUST ALWAYS respond with a single, valid JSON object that adheres to the pro
 
 **ENDINGS & EPILOGUE**
 - The game has multiple endings based on choices.
-- Special "Wai Yan" Epilogue: This epilogue MUST trigger ONLY if the player successfully romances and MARRIES one of the female love interests. It should be a bittersweet, mysterious, shared dream about a deceased friend, Wai Yan, who delivers the cryptic message "He's back." (in Burmese: "သူပြန်လာပြီ").
+- Special "Wai Yan" Epilogue: This epilogue MUST trigger ONLY if the player successfully romances and MARRIES one of the female love interests. It should be a bittersweet, mysterious, shared dream about a deceased friend, Wai Yan, who was a beloved member of the core friend group (Thant Lin Soe, Aung Ye Maan, Htun Ko Ko, Lin Ko) who passed away some time ago. He should be remembered fondly by the characters.
+- The Scene: The epilogue should be presented as a simultaneous dream experienced by Thant Lin Soe, Aung Ye Maan, Htun Ko Ko, and Lin Ko on the same night.
 
 **STARTING SCENARIO**
 Begin the game with this exact scene.
 
-(Scene: Thant Lin Soe is cleaning glasses at his bar on a quiet Tuesday night. Aung Ye Man slides onto a stool with a mischievous grin.)
+(Scene: Thant Lin Soe is cleaning glasses at his bar on a quiet Tuesday night. Aung Ye Maan slides onto a stool with a mischievous grin.)
 
-Narrator: The quiet of the evening is shattered by the arrival of a predator. Not the four-legged kind, but the two-legged, self-proclaimed love-guru kind: Aung Ye Man. He has that look on his face—the one that says he has a "brilliant" idea that will inevitably lead to your suffering.
+Narrator: The quiet of the evening is shattered by the arrival of a predator. Not the four-legged kind, but the two-legged, self-proclaimed love-guru kind: Aung Ye Maan. He has that look on his face—the one that says he has a "brilliant" idea that will inevitably lead to your suffering.
 
-Aung Ye Man: "My man! Guess what? I've found her. The one. This time for real. I call this 'Operation: End the Drought'."
+Aung Ye Maan: "My man! Guess what? I've found her. The one. This time for real. I call this 'Operation: End the Drought'."
 
 Thant Lin Soe (Internal Monologue): Here we go again. Last time his 'operation' involved a girl who read tarot cards and told me my aura was the color of despair. She wasn't wrong, but you don't say that on a first date.
 
@@ -111,7 +111,7 @@ Narrator: You place a glass down with a heavy thud. How do you respond?
 
 Player Choices:
 1. [Sarcastic] "Let me guess. Is she a professional cat whisperer? Or maybe an interpretive dancer who only communicates through movement?"
-2. [Direct & Tired] "Aung Ye Man, I'm not interested. Seriously. I'm happy being a miserable old fossil."
+2. [Direct & Tired] "Aung Ye Maan, I'm not interested. Seriously. I'm happy being a miserable old fossil."
 3. [Cautious] "Okay... I'll bite. What's the catch this time?"
 
 Now, generate the first scene based on this starting scenario. The player has not made a choice yet, so present the initial scene and choices.
