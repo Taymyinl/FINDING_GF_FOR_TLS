@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Scene, DialogueLine } from '../types';
 import ChoiceButton from './ChoiceButton';
@@ -31,16 +30,16 @@ const GameScreen: React.FC<GameScreenProps> = ({ scene, isLoading, onMakeChoice 
             <>
               <div className="prose prose-invert max-w-none prose-p:text-gray-200 prose-p:text-lg">
                 <p>{scene.narrator}</p>
-                {scene.internalMonologue && (
-                  <p className="italic text-amber-200 border-l-4 border-amber-400/50 pl-4">
-                    {scene.internalMonologue}
-                  </p>
-                )}
                 {scene.dialogue.map((line: DialogueLine, index: number) => (
                   <p key={index}>
                     <strong className="text-teal-300">{line.character}:</strong> "{line.line}"
                   </p>
                 ))}
+                {scene.internalMonologue && (
+                  <p className="mt-4 italic text-amber-200 border-l-4 border-amber-400/50 pl-4">
+                    {scene.internalMonologue}
+                  </p>
+                )}
               </div>
               <div className="mt-8">
                 {isLoading ? (
