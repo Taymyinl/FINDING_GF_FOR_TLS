@@ -1,11 +1,10 @@
-
 export enum Language {
   ENGLISH = 'English',
   MYANMAR = 'Myanmar (Burmese)',
 }
 
 export enum GameStatus {
-  LANGUAGE_SELECT,
+  START_SCREEN,
   PLAYING,
   ERROR,
 }
@@ -26,4 +25,17 @@ export interface Scene {
   internalMonologue?: string;
   dialogue: DialogueLine[];
   choices: Choice[];
+}
+
+// Content interface for Gemini chat history
+export interface Content {
+  role: 'user' | 'model';
+  parts: { text: string }[];
+}
+
+// SaveData interface for the save file structure
+export interface SaveData {
+  language: Language;
+  currentScene: Scene;
+  history: Content[];
 }

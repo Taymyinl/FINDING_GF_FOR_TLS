@@ -7,9 +7,10 @@ interface GameScreenProps {
   scene: Scene | null;
   isLoading: boolean;
   onMakeChoice: (choiceText: string) => void;
+  onSaveGame: () => void;
 }
 
-const GameScreen: React.FC<GameScreenProps> = ({ scene, isLoading, onMakeChoice }) => {
+const GameScreen: React.FC<GameScreenProps> = ({ scene, isLoading, onMakeChoice, onSaveGame }) => {
   const backgroundImageUrl = scene 
     ? `https://picsum.photos/seed/${encodeURIComponent(scene.sceneImagePrompt)}/1920/1080`
     : 'https://picsum.photos/1920/1080';
@@ -20,6 +21,17 @@ const GameScreen: React.FC<GameScreenProps> = ({ scene, isLoading, onMakeChoice 
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      
+      <div className="absolute top-4 right-4 z-20">
+        <button 
+          onClick={onSaveGame}
+          className="px-4 py-2 bg-gray-800/80 border border-amber-500/50 rounded-lg shadow-lg text-amber-200 font-semibold hover:bg-amber-500/20 hover:border-amber-400 transition-all duration-300"
+          aria-label="Save Game"
+        >
+          Save Game
+        </button>
+      </div>
+
       <div className="relative z-10 p-4 sm:p-6 md:p-8 max-w-4xl mx-auto w-full">
         <div className="bg-gray-900/80 p-6 rounded-xl shadow-2xl border border-gray-700">
           {isLoading && !scene ? (
